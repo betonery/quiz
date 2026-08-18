@@ -1,0 +1,96 @@
+.landing-tech-bg {
+  background: linear-gradient(
+    145deg,
+    #0a0a0a 0%,
+    #0f172a 35%,
+    #1e293b 65%,
+    #0f172a 100%
+  );
+}
+
+.landing-tech-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(
+    ellipse 80% 70% at 50% 50%,
+    black 20%,
+    transparent 100%
+  );
+}
+
+.landing-glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.landing-glass-light {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.dark .landing-glass-light {
+  background: rgba(30, 41, 59, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.landing-gradient-text {
+  background: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.landing-glow-blue {
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.35) 0%,
+    transparent 70%
+  );
+}
+
+.landing-glow-indigo {
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.3) 0%,
+    transparent 70%
+  );
+}
+
+@keyframes landing-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.landing-float {
+  animation: landing-float 6s ease-in-out infinite;
+}
+
+@keyframes landing-pulse-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.landing-pulse-glow {
+  animation: landing-pulse-glow 8s infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-float,
+  .landing-pulse-glow {
+    animation: none;
+  }
+}

@@ -1,0 +1,2 @@
+ALTER TABLE quizzes
+  ADD COLUMN IF NOT EXISTS variables JSONB NOT NULL DEFAULT '[]'::jsonb;

@@ -1,0 +1,2 @@
+ALTER TABLE quizzes
+ADD COLUMN IF NOT EXISTS flow_layout JSONB NOT NULL DEFAULT '{}'::jsonb;

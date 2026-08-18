@@ -1,0 +1,170 @@
+/* Tokens de animação para Framer Motion — uso futuro */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes builder-toast-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes builder-toast-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes builder-toast-progress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.builder-toast-enter {
+  animation: builder-toast-enter 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.builder-toast-exit {
+  animation: builder-toast-exit 0.32s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.builder-toast-progress {
+  animation: builder-toast-progress var(--toast-duration) linear forwards;
+  transform-origin: left center;
+}
+
+@keyframes logo-bar-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-bar-marquee-track {
+  animation: logo-bar-marquee linear infinite;
+  will-change: transform;
+}
+
+/* Animações do widget Botão (CTA) */
+@keyframes btn-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes btn-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-4px);
+  }
+  40%,
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes btn-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes btn-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0
+      color-mix(in srgb, var(--btn-glow-color, #0f172a) 40%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 16px 4px
+      color-mix(in srgb, var(--btn-glow-color, #0f172a) 55%, transparent);
+  }
+}
+
+@keyframes btn-wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+.btn-animate-pulse {
+  animation: btn-pulse 1.6s ease-in-out infinite;
+}
+
+.btn-animate-shake {
+  animation: btn-shake 0.8s ease-in-out infinite;
+}
+
+.btn-animate-bounce {
+  animation: btn-bounce 1.4s ease-in-out infinite;
+}
+
+.btn-animate-glow {
+  animation: btn-glow 1.8s ease-in-out infinite;
+}
+
+.btn-animate-wiggle {
+  animation: btn-wiggle 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-animate-pulse,
+  .btn-animate-shake,
+  .btn-animate-bounce,
+  .btn-animate-glow,
+  .btn-animate-wiggle {
+    animation: none !important;
+  }
+}

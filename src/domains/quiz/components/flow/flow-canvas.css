@@ -1,0 +1,76 @@
+.adquiz-flow .react-flow__node {
+  overflow: visible !important;
+}
+
+.adquiz-flow .react-flow__nodes {
+  z-index: 2;
+}
+
+.adquiz-flow .react-flow__edges {
+  z-index: 1;
+}
+
+.adquiz-flow svg.react-flow__connectionline {
+  z-index: 1002 !important;
+  pointer-events: none;
+}
+
+.adquiz-flow .react-flow__connection-path {
+  stroke: #60a5fa !important;
+  stroke-width: 2 !important;
+}
+
+.adquiz-flow .react-flow__handle {
+  z-index: 10;
+}
+
+.adquiz-flow .react-flow__handle.flow-handle {
+  width: 12px !important;
+  height: 12px !important;
+  min-width: 12px !important;
+  min-height: 12px !important;
+  border-width: 2px !important;
+  background: #0b121e !important;
+  border-color: #3b82f6 !important;
+  pointer-events: all !important;
+}
+
+.adquiz-flow .react-flow__edge-path {
+  stroke-linecap: round;
+  transition: stroke-width 0.15s ease;
+}
+
+.adquiz-flow .react-flow__edge.selectable:hover {
+  cursor: pointer;
+}
+
+.adquiz-flow .react-flow__edge.selectable:hover .react-flow__edge-path {
+  stroke-width: 3 !important;
+}
+
+.adquiz-flow .flow-controls {
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+}
+
+.adquiz-flow .flow-controls .react-flow__controls-button {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+  fill: #e2e8f0 !important;
+}
+
+.adquiz-flow .flow-controls .react-flow__controls-button:hover {
+  background: #334155 !important;
+  color: #f8fafc !important;
+  fill: #f8fafc !important;
+}
+
+.adquiz-flow .flow-controls .react-flow__controls-button svg {
+  fill: currentColor !important;
+}
+
+.adquiz-flow .flow-minimap {
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+}

@@ -1,0 +1,13 @@
+@layer utilities {
+  .text-headline {
+    @apply text-4xl font-bold tracking-tight text-foreground;
+  }
+
+  .text-body {
+    @apply text-base font-normal text-foreground;
+  }
+
+  .text-label {
+    @apply text-sm font-medium text-muted-foreground;
+  }
+}
