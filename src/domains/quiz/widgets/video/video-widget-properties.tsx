@@ -36,13 +36,14 @@ export function VideoWidgetProperties({
           <textarea
             value={config.embedCode}
             onChange={(e) => patch({ embedCode: e.target.value })}
-            placeholder="Cole o iframe ou URL do YouTube, Vimeo ou Loom..."
+            placeholder="Cole o iframe ou a URL do vídeo (YouTube, Vimeo, Loom, Panda Video, Vturb...)"
             className={propertyTextareaClass}
           />
         </PropertyField>
         {config.embedCode.trim() && !isValid ? (
           <p className="text-xs text-amber-600">
-            URL ou iframe inválido. Use YouTube, Vimeo ou Loom.
+            URL ou iframe inválido. Cole um endereço https:// completo ou o
+            código de incorporação do player.
           </p>
         ) : null}
         {isValid ? (

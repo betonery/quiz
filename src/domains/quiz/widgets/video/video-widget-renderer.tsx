@@ -23,7 +23,8 @@ export function VideoWidgetRenderer({
           className,
         )}
       >
-        Adicione um vídeo válido (YouTube, Vimeo ou Loom)
+        Adicione um vídeo válido (YouTube, Vimeo, Loom, Panda Video ou qualquer
+        outro iframe)
       </div>
     );
   }
@@ -41,6 +42,12 @@ export function VideoWidgetRenderer({
         className,
       )}
     >
+      {/*
+        `allow-fullscreen` não existe como token de sandbox: o fullscreen vem do
+        atributo allowFullScreen somado a `allow-presentation`. Players de
+        terceiros (Panda, Vturb) abrem janelas de compartilhamento, daí os
+        tokens de popup.
+      */}
       <iframe
         src={parsed.src}
         title="Vídeo incorporado"
@@ -48,7 +55,7 @@ export function VideoWidgetRenderer({
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
         loading="lazy"
-        sandbox="allow-scripts allow-same-origin allow-presentation allow-fullscreen"
+        sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox"
       />
     </div>
   );
